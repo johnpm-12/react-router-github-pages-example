@@ -1,3 +1,39 @@
+## React Router on Github Pages
+
+App is at https://whatsyourgithub.github.io/react-router-github-pages-example
+
+This was written 2/12/19
+
+### Steps to create
+
+Create github repo "react-router-github-pages-example"
+
+Run:
+```
+npx create-react-app react-router-github-pages-example
+cd react-router-github-pages-example
+npm install react-router-dom
+npm install gh-pages --save-dev
+```
+
+Edit package.json:
+1. Add homepage
+2. Add predeploy and deploy scripts
+3. Edit build script to copy index.html to 404.html (add "&& cp build/index.html build/404.html" on linux)
+
+Edit App.js:
+1. Replace content with basic react router example
+2. Add basename to router component with "/react-router-github-pages-example"
+
+Add github repo as remote and push changes
+
+And finally run:
+```
+npm run deploy
+```
+
+#
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
